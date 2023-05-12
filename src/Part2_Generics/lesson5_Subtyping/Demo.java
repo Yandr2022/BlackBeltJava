@@ -14,6 +14,7 @@ public class Demo {
         numList.add(new Num<>(5.8f));
         numList.add(new Num<>(5.8));
 // numList.add(new Num<>("5.8")); cannot infer type arguments  inference variable T has incompatible bounds: java.lang.Number
+
         for (Num n : numList) {
             System.out.println(n);
         }
