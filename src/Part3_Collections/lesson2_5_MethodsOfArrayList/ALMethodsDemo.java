@@ -38,14 +38,14 @@ public class ALMethodsDemo {
         Obj remEl = objList.remove(1);
         System.out.println(objList);
         System.out.println(remEl + "\n--------");
-        objList.add(remEl);
         //by equals without Overriding
+        objList.add(remEl);
         System.out.println(objList);
         objList.remove(new Obj("Second"));
         System.out.println(objList);
         objList.remove(remEl);
+        System.out.println(objList + "\n--------");
         //by equals with Overriding
-        System.out.println(objList);
         objList.add(new OverrideEquals("Child"));
         System.out.println(objList);
         objList.remove(new OverrideEquals("Child"));
@@ -83,7 +83,7 @@ public class ALMethodsDemo {
         mixLetters.addAll(lettersA);
         System.out.println(mixLetters);
         mixLetters.retainAll(lettersB);
-        System.out.println(mixLetters);
+        System.out.println(mixLetters + "\n*******************");
 
         //indexOf
         objList.add(new OverrideEquals("Second"));
@@ -106,9 +106,34 @@ public class ALMethodsDemo {
 
         //contains
         System.out.println(lettersA.contains("B"));
-        System.out.println(lettersA.contains("D"));
+        System.out.println(lettersA.contains("D") + "\n*******************");
 
+        //containsAll
+        System.out.println(lettersA);
+        System.out.println(lettersB);
+        System.out.println(lettersA.containsAll(lettersB));
+        lettersB.add("D");
+        System.out.println(lettersB);
+        System.out.println(lettersA.containsAll(lettersB) + "\n*******************");
 
+        //subList
+        List<String> subList = lettersA.subList(1, 6);
+        System.out.println(lettersA);
+        System.out.println(subList);
+        subList.add("D");
+        System.out.println(lettersA + "\n*******************");
+//        lettersA.add("E");
+//        System.out.println(subList); - ConcurrentModificationException
+
+        //toArray
+        Object[] arr = lettersA.toArray();
+        System.out.println(arr + " " + Arrays.toString(arr));
+        String[] strArr = lettersA.toArray(new String[0]);
+        System.out.println(strArr + " " + Arrays.toString(strArr) );
+         strArr = lettersA.toArray(new String[2]);
+        System.out.println(strArr + " " + Arrays.toString(strArr));
+         strArr = lettersA.toArray(new String[lettersA.size()+3]);
+        System.out.println(strArr + " " + Arrays.toString(strArr) + "\n*******************");
     }
 }
 
