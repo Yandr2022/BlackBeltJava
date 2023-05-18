@@ -1,4 +1,4 @@
-package Part3_Collections.lesson14_EqualsHashCodeMeths;
+package Part3_Collections.lesson14_15_EqualsHashCodeMeths;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ public class HashCodeExample {
 
     public static void main(String[] args) {
 
-        Map<Obj, Double> map = new HashMap<>();
+        Map<Obj, Double> map = new HashMap<>();//init capacity 16, load factor 0.75
         Obj obj1 = new Obj("A", "aaa", 1);
         Obj obj2 = new Obj("B", "bbb", 2);
         Obj obj3 = new Obj("C", "ccc", 3);
@@ -25,19 +25,37 @@ public class HashCodeExample {
         System.out.println(obj1.hashCode());
         System.out.println(obj2.hashCode());
         System.out.println(obj3.hashCode());
+
+        for (Map.Entry<Obj, Double> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+
+
     }
 }
 
-class Obj {
-    String name;
-    String bio;
-    int id;
+final class Obj {
+    private final String name;
+    private final String bio;
+    private final int id;
 
 
     public Obj(String name, String bio, int id) {
         this.name = name;
         this.bio = bio;
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override
