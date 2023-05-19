@@ -1,8 +1,8 @@
-package Part3_Collections.lesson15_TreeMap;
+package Part3_Collections.lesson17_TreeMap;
 
 
+import java.util.Comparator;
 import java.util.Objects;
-import java.util.Set;
 import java.util.TreeMap;
 
 public class TreeMapDemo {
@@ -20,11 +20,11 @@ public class TreeMapDemo {
         System.out.println(map.put(1.5, obj3));
         System.out.println(map + "\n");
 
-        for (Double key : map.descendingKeySet()) {
-            System.out.println(map.get(key));
+        for (Double key : map.keySet()) {
+            System.out.print(map.get(key) + " ");
         }
 
-        System.out.println("\n" + map.remove(1.5));
+        System.out.println("\n\n" + map.remove(1.5));
         System.out.println(map + "\n");
 
         System.out.println(map.descendingMap() + "\n");
@@ -39,10 +39,25 @@ public class TreeMapDemo {
         System.out.println(map.firstEntry() + "\n");
 
         TreeMap<Obj, String> map1 = new TreeMap<>();
-        map1.put(obj1, "X");
-        map1.put(obj2, "Y");
-        map1.put(obj3, "Z");
+        map1.put(new Obj("A", "ddd", 2), "X");
+        map1.put(new Obj("B", "bbb", 3), "Y");
+        map1.put(new Obj("D", "ddd", 1), "Z");
         System.out.println(map1);
+
+        map1 = new TreeMap<>((o1, o2) -> o1.getName().compareTo(o2.getName()));
+        map1.put(new Obj("A", "ddd", 2), "X");
+        map1.put(new Obj("B", "bbb", 3), "Y");
+        map1.put(new Obj("D", "ddd", 1), "Z");
+        System.out.println(map1);
+
+        map1 = new TreeMap<>(Comparator.comparing(obj -> obj.getBio()));
+        map1.put(new Obj("A", "ccc", 2), "X");
+        map1.put(new Obj("B", "bbb", 3), "Y");
+        map1.put(new Obj("D", "ddd", 1), "Z");
+        System.out.println(map1 + "\n");
+
+        System.out.println(map1.containsValue("X"));
+        System.out.println(map1.containsKey(new Obj("B", "bbb", 3)));
 
     }
 }
