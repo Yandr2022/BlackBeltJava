@@ -17,6 +17,7 @@ public class HashMapDemo {
         map.put(1358, "Svetlana");
         System.out.println(map.put(9653, "Andrey"));
         System.out.println(map.put(9653, "Georgiy"));
+
         System.out.println(map.putIfAbsent(3258, "Ivan2"));
         System.out.println(map.putIfAbsent(32581, "Ivan2"));
         System.out.println(map);
@@ -28,6 +29,7 @@ public class HashMapDemo {
 
         System.out.println(map.containsValue("Ivan"));
         System.out.println(map.containsKey(404));
+
 
         Set<Integer> setK = map.keySet();
         Collection<String> setV = map.values();
