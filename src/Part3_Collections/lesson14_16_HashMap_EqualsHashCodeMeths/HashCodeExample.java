@@ -1,4 +1,4 @@
-package Part3_Collections.lesson14_15_EqualsHashCodeMeths;
+package Part3_Collections.lesson14_16_HashMap_EqualsHashCodeMeths;
 
 import java.util.HashMap;
 import java.util.Map;
