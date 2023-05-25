@@ -1,4 +1,4 @@
-package Part5_LambdaExpressions.lesson1_Introduction.lesson2;
+package Part5_LambdaExpressions.lesson1_2_Introduction;
 
 
 

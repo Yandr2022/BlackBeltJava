@@ -1,16 +1,17 @@
-package Part5_LambdaExpressions.lesson1_Introduction.lesson2;
+package Part5_LambdaExpressions.lesson1_2_Introduction;
 
 public class LambdaDemo {
 
-    static void foo1(I i){
+    static void foo1(I i) {
         System.out.println(i.foo("Hello"));
     }
 
     public static void main(String[] args) {
-        foo1((s -> s.length()));
+        int i = 10;
+        foo1((s -> s.length() + i));
     }
 }
 
-interface I{
+interface I {
     int foo(String s);
 }
