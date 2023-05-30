@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class Demo {
+public class DemoPredicateTest {
     public static void main(String[] args) {
 
         Student student = new Student("Ivan", 'm', 2, 23, 7.5);
@@ -24,6 +24,16 @@ public class Demo {
         students.add(student5);
 
         showStudentsByCondition(students, (st) -> st.getCourse() > 2);
+
+        Predicate<Student> predicate = (st) -> st.getAvgGrade() >= 7.5;
+        Predicate<Student> predicate1 = st -> st.getSex() == 'm';
+        System.out.println();
+
+        showStudentsByCondition(students, predicate1.and(predicate));
+
+        System.out.println();
+        showStudentsByCondition(students, predicate1.negate().and(predicate));
+
 
     }
 
