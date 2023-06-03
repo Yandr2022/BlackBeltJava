@@ -4,12 +4,7 @@ public class AnonymousClassDemo {
     private int x = 5;
 
     public static void main(String[] args) {
-        Math math = new Math() {
-            @Override
-            public int doOperation(int a, int b) {
-                return a + b;
-            }
-        };
+        Math math = (a, b) -> a + b;
         System.out.println(math.doOperation(5, 10));
 
         Math math1 = (a, b) -> a * b;
