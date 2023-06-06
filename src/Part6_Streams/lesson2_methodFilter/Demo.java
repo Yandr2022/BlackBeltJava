@@ -1,4 +1,4 @@
-package Streams.lesson2_methodFilter;
+package Part6_Streams.lesson2_methodFilter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Demo {
         list.add("Svetlana");
         list.add("Aleksandr");
         list.add("Andrey");
-        List<String> list1 = list.stream().filter(el->el.startsWith("A")).collect(Collectors.toList());
+        List<String> list1 = list.stream().filter(el -> el.startsWith("A")).collect(Collectors.toList());
         System.out.println(list1);
     }
 }

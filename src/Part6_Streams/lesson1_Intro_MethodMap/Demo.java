@@ -1,4 +1,4 @@
-package Streams.lesson1_Intro_MethodMap;
+package Part6_Streams.lesson1_Intro_MethodMap;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -18,11 +18,12 @@ public class Demo {
 
 //        list.replaceAll(s -> String.valueOf(s.length()));
 
-        List<Integer> integerList = list.stream().map(el -> el.length()).collect(Collectors.toList());
+//        List<Integer> integerList = list.stream().map(el -> el.length()).collect(Collectors.toList());
+        List<Integer> integerList = list.stream().map(String::length).collect(Collectors.toList());
         System.out.println(integerList);
 
 
-        int [] arr = {2, 18, 26, 5, -4, 21};
+        int[] arr = {2, 18, 26, 5, -4, 21};
         arr = Arrays.stream(arr).map(el -> el % 3 == 0 ? el / 3 : el).toArray();
         System.out.println(Arrays.toString(arr));
 
@@ -33,7 +34,7 @@ public class Demo {
         strings.add("jklmnopQrSt");
         System.out.println(strings);
 
-        Set<Integer> set = strings.stream().map(el ->el.length()).collect(Collectors.toSet());
+        Set<Integer> set = strings.stream().map(el -> el.length()).collect(Collectors.toSet());
         System.out.println(set);
 
 
