@@ -1,4 +1,4 @@
-package Part6_Streams.lesson7_10_MethsConcatDistinctCountPeek;
+package Part6_Stream_API.lesson7_10_MethsConcatDistinctCountPeek;
 
 import java.util.stream.Stream;
 

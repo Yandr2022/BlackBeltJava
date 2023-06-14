@@ -1,4 +1,4 @@
-package Part6_Streams.lesson4_ReduceMeth;
+package Part6_Stream_API.lesson4_ReduceMeth;
 
 import java.util.ArrayList;
 import java.util.List;

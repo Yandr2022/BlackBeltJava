@@ -1,4 +1,4 @@
-package Part6_Streams.lesson6_MethChaining;
+package Part6_Stream_API.lesson5_SortedMeth;
 
 import Part5_LambdaExpressions.lesson3_Predicate.Student;
 
@@ -7,13 +7,12 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Demo {
     public static void main(String[] args) {
-        int[] arr = {3, 8, 1, 5, 9, 12, 4, 21, 81, 7, 18};
-        int res = Arrays.stream(arr).filter(el -> el % 2 != 0).map(el -> el % 3 == 0 ? el / 3 : el).reduce((acc, el) -> acc + el).getAsInt();
-        System.out.println(res);
+        int[] arr = {3, 5, -8, 16, -122, 0, 65, 94, 5};
+        arr = Arrays.stream(arr).sorted().toArray();
+        System.out.println(Arrays.toString(arr));
 
         Student student = new Student("Ivan", 'm', 2, 23, 7.5);
         Student student1 = new Student("Maria", 'f', 1, 19, 8.7);
@@ -28,19 +27,8 @@ public class Demo {
         students.add(student3);
         students.add(student4);
         students.add(student5);
-
-        students.stream().filter(el -> el.getSex() == 'f').sorted(Comparator.comparingInt(Student::getAge))
-                .map(el -> {
-                    el.setName(el.getName().toUpperCase());
-                    return el;
-                }).forEach(System.out::println);
-
-        Stream<Integer> stream = Stream.of(1, 8, 3, 7, 20, 5);
-        stream.filter(el -> {
-            System.out.println("!!!");
-            return el % 2 == 0;
-        });//will not be executed because the filter method is lazy -> waiting for a terminal method call
-
-
+        System.out.println(students+"\n");
+        students = students.stream().sorted(Comparator.comparingInt(Student::getAge)).collect(Collectors.toList());
+        System.out.println(students);
     }
 }

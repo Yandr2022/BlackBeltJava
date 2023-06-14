@@ -1,4 +1,4 @@
-package Part6_Streams.lesson2_methodFilter;
+package Part6_Stream_API.lesson2_methodFilter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package Part6_Streams.lesson1_Intro_MethodMap;
+package Part6_Stream_API.lesson1_Intro_MethodMap;
 
 import java.util.*;
 import java.util.stream.Collectors;

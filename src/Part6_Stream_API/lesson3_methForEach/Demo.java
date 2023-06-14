@@ -1,4 +1,4 @@
-package Part6_Streams.lesson3_methForEach;
+package Part6_Stream_API.lesson3_methForEach;
 
 import java.util.Arrays;
 import java.util.List;
