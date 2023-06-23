@@ -19,11 +19,11 @@ public class SynchronyzedBlocks1 {
 
     public static void main(String[] args) {
          Thread thread = new Thread(()->{ for (int i = 0; i < 1000; i++) {
-//             increment();
+             increment();
            increment1();
         }});
         Thread thread1= new Thread(()->{ for (int i = 0; i < 1000; i++) {
-//             increment();
+             increment();
             increment1();
         }});
 

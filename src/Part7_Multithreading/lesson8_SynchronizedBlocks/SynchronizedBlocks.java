@@ -30,7 +30,7 @@ class MyRunnable implements Runnable {
     private  void increment() {
         labelPrint();
         synchronized (this) {
-            System.out.print(Counter.count++ + " ");
+            System.out.println(Counter.count++ + " ");
         }
     }
 
