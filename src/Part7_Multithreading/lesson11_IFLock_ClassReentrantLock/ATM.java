@@ -9,17 +9,17 @@ public class ATM {
 
         Lock lock = new ReentrantLock();
 
-        new Employee("Yuli",lock);
-        new Employee("Ivan",lock);
-        new Employee("Alex",lock);
+        new Employee("Yuli", lock);
+        new Employee("Ivan", lock);
+        new Employee("Alex", lock);
         Thread.sleep(5000);
-        new Employee("Natali",lock);
-        new Employee("Igor",lock);
+        new Employee("Natali", lock);
+        new Employee("Igor", lock);
 
     }
 }
 
-class Employee extends Thread{
+class Employee extends Thread {
     private String name;
     private Lock lock;
 
@@ -31,7 +31,7 @@ class Employee extends Thread{
 
     @Override
     public void run() {
-        if(lock.tryLock()) {
+        if (lock.tryLock()) {
             try {
 //            System.out.println(name + " waiting....");
 //            lock.lock();
@@ -43,8 +43,8 @@ class Employee extends Thread{
             } finally {
                 lock.unlock();
             }
-        }else{
-            System.out.println(name+" doesn't want to wait");
+        } else {
+            System.out.println(name + " doesn't want to wait");
         }
     }
 }
