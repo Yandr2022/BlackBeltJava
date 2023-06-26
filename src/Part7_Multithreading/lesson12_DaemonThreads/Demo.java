@@ -21,7 +21,7 @@ public class Demo {
     }
 }
 
-class UserThread extends Thread{
+class UserThread extends Thread {
 
     public UserThread(String name) {
         super(name);
@@ -30,7 +30,7 @@ class UserThread extends Thread{
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName() + " is daemon: " + isDaemon());
-        for (char i = 'A'; i <= 'J' ; i++) {
+        for (char i = 'A'; i <= 'J'; i++) {
             try {
                 sleep(300);
                 System.out.print(i);
@@ -42,7 +42,7 @@ class UserThread extends Thread{
     }
 }
 
-class DaemonThread extends Thread{
+class DaemonThread extends Thread {
 
     public DaemonThread(String name) {
         super(name);
@@ -51,7 +51,7 @@ class DaemonThread extends Thread{
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName() + " is daemon: " + isDaemon());
-        for (int i = 1; i <= 1000 ; i++) {
+        for (int i = 1; i <= 1000; i++) {
             try {
                 sleep(300);
                 System.out.print(i);
