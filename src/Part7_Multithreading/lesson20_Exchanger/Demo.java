@@ -1,4 +1,4 @@
-package Part7_Multithreading.lesson19_Exchanger;
+package Part7_Multithreading.lesson20_Exchanger;
 
 import java.util.ArrayList;
 import java.util.List;
