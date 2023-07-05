@@ -1,4 +1,4 @@
-package Part8_IO_NIO_Files.lesson14_PathAndFiles;
+package Part8_IO_NIO_Files.lesson14_15_PathAndFiles;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Demo {
     public static void main(String[] args) throws IOException {
-        Path filePath = Paths.get("src/Part8_IO_NIO_Files/lesson14_PathAndFiles/test.txt");
+        Path filePath = Paths.get("src/Part8_IO_NIO_Files/lesson14_15_PathAndFiles/test.txt");
         Path dirPath = Paths.get("C:\\Users\\Юлия\\OneDrive\\Рабочий стол\\test1");
 
         System.out.println("filePath.getFileName(): " + filePath.getFileName());
@@ -65,7 +65,7 @@ public class Demo {
         System.out.println("Files.isExecutable(filePath): " + Files.isExecutable(filePath));
         System.out.println("*******************************************");
 
-        Path samePath = Paths.get("C:\\Users\\Юлия\\BlackBeltJava\\src\\Part8_IO_NIO_Files\\lesson14_PathAndFiles\\test.txt");
+        Path samePath = Paths.get("C:\\Users\\Юлия\\BlackBeltJava\\src\\Part8_IO_NIO_Files\\lesson14_15_PathAndFiles\\test.txt");
             System.out.println("Files.isSameFile(filePath,samePath): " + Files.isSameFile(filePath,samePath));
         System.out.println("*******************************************");
 
