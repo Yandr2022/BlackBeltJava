@@ -1,4 +1,4 @@
-package Part10_OtherImportantThemes.lesson5_Reflection;
+package Part10_OtherImportantThemes.lesson5_6_Reflection;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

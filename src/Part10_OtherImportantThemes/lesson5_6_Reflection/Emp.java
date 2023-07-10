@@ -1,35 +1,21 @@
-package Part10_OtherImportantThemes.lesson5_Reflection;
+package Part10_OtherImportantThemes.lesson5_6_Reflection;
 
-public class Employee {
+public class Emp {
 
     public int id;
     public String name;
     public String department;
-    private double salary;
+    private double salary =1000;
 
-    public Employee() {
+    public Emp() {
     }
 
-    public Employee(int id, String name, String department) {
+    public Emp(int id, String name, String department) {
         this.id = id;
         this.name = name;
         this.department = department;
     }
 
-    public Employee(int id, String name, String department, double salary) {
-        this.id = id;
-        this.name = name;
-        this.department = department;
-        this.salary = salary;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
 
     private void changeDep(String department) {
         this.department = department;

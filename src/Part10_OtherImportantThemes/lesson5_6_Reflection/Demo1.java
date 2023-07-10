@@ -1,4 +1,4 @@
-package Part10_OtherImportantThemes.lesson5_Reflection;
+package Part10_OtherImportantThemes.lesson5_6_Reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -10,7 +10,7 @@ public class Demo1 {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException
             , NoSuchMethodException, InvocationTargetException, NoSuchFieldException {
 
-        Class emp = Class.forName("Part10_OtherImportantThemes.lesson5_Reflection.Employee");
+        Class emp = Class.forName("Part10_OtherImportantThemes.lesson5_6_Reflection.Employee");
         Employee o =(Employee) emp.newInstance();//deprecated
         System.out.println(o);
 

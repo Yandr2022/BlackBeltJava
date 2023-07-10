@@ -1,4 +1,4 @@
-package Part10_OtherImportantThemes.lesson5_Reflection;
+package Part10_OtherImportantThemes.lesson5_6_Reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Demo {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, NoSuchMethodException {
 
-        Class emp = Class.forName("Part10_OtherImportantThemes.lesson5_Reflection.Employee");
+        Class emp = Class.forName("Part10_OtherImportantThemes.lesson5_6_Reflection.Employee");
 //        Class emp = Employee.class;
 //        Employee employee = new Employee();
 //        Class emp = employee.getClass();
