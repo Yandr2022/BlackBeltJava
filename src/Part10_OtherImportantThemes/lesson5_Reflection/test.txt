@@ -1,0 +1,12 @@
+sum
+13
+8
+subtraction
+25
+3
+multiplication
+113
+45
+division
+42
+5

@@ -37,19 +37,22 @@ public class Demo {
 
        Method[] methods = emp.getMethods();
         for (Method m : methods) {
-            System.out.printf("%-18s:\t%-6s\t%s\n", m.getName(), m.getModifiers(), m.getReturnType(), Arrays.toString(m.getParameters()));
+            System.out.printf("%-18s:\t%-6s\t%s\n", m.getName(), m.getModifiers(), m.getReturnType()
+                    , Arrays.toString(m.getParameters()));
         }
         System.out.println("***********************");
 
        methods = emp.getDeclaredMethods();
         for (Method m : methods) {
-            System.out.printf("%-18s:\t%-6s\t%s\n", m.getName(), m.getModifiers(), m.getReturnType(), Arrays.toString(m.getParameters()));
+            System.out.printf("%-18s:\t%-6s\t%s\n", m.getName(), m.getModifiers(), m.getReturnType()
+                    , Arrays.toString(m.getParameters()));
         }
         System.out.println("***********************");
 
         for (Method m : methods) {
             if(Modifier.isPublic(m.getModifiers()))
-            System.out.printf("%-18s:\t%-6s\t%-12s\t%s\n", m.getName(), m.getModifiers(), m.getReturnType(), Arrays.toString(m.getParameters()));
+            System.out.printf("%-18s:\t%-6s\t%-12s\t%s\n", m.getName(), m.getModifiers(), m.getReturnType()
+                    , Arrays.toString(m.getParameters()));
         }
         System.out.println("***********************");
 
